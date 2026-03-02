@@ -205,7 +205,7 @@ private:
 
     bool allow_downgrade{true};
     bool allow_erasing{false};
-    bool allow_vendor_change{true};
+    bool allow_vendor_change{false};
     bool install_weak_deps{true};
     // Remove SOLVER_WEAK and add SOLVER_BEST to all jobs
     bool run_in_strict_mode{false};
