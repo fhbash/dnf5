@@ -9,7 +9,7 @@ repos:
        test/libdnf5/iniparser/test_iniparser.cpp
   - id: end-of-file-fixer
   - id: check-xml
-    exclude: \.tito/tito\.props
+    exclude: \.tito/tito\.props|comps_syntax_error\.xml
   - id: check-added-large-files
   - id: check-merge-conflict
 - repo: https://github.com/pre-commit/mirrors-clang-format
@@ -23,6 +23,7 @@ repos:
   hooks:
   - id: autopep8
     args: [-i, --max-line-length=120]
+    exclude: ^integration-tests/
 - repo: https://github.com/rpm-software-management/rpmlint.git
   rev: 2.5.0
   hooks:
